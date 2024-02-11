@@ -38,7 +38,7 @@ public abstract class FabricLoader implements net.fabricmc.loader.api.FabricLoad
 	public static final FabricLoader INSTANCE = FabricLoaderImpl.InitHelper.get();
 
 	public File getModsDirectory() {
-		return getModsDirectory0().toFile();
+		return getGameDir().resolve("rtuserver").resolve(((FabricLoaderImpl) INSTANCE).getGameProvider().getRawGameVersion()).toFile();
 	}
 
 	@Override

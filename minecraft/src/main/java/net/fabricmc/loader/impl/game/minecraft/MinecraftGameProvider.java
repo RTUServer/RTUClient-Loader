@@ -263,7 +263,7 @@ public class MinecraftGameProvider implements GameProvider {
 			}
 
 			if (!argMap.containsKey("version")) {
-				argMap.put("version", "Fabric");
+				argMap.put("version", "RTUClient");
 			}
 
 			String versionType = "";
@@ -272,7 +272,7 @@ public class MinecraftGameProvider implements GameProvider {
 				versionType = argMap.get("versionType") + "/";
 			}
 
-			argMap.put("versionType", versionType + "Fabric");
+			argMap.put("versionType", versionType + "RTUClient");
 
 			if (!argMap.containsKey("gameDir")) {
 				argMap.put("gameDir", getLaunchDirectory(argMap).toAbsolutePath().normalize().toString());
